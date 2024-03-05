@@ -1,0 +1,12 @@
+.header__menu {
+    width: 30%;
+}
+
+.header__menu_list ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__menu_list li:hover {
+    text-decoration: underline;
+}

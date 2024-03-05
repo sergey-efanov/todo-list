@@ -1,0 +1,23 @@
+.header__auth {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.header__auth a {
+    margin-right: 25px;
+    padding: 5px 20px;
+    border: 1px solid rgb(85, 122, 102);
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.header__auth a:hover {
+    border-radius: 10px;
+    background-color: rgb(85, 122, 102);
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.header__auth a:last-child {
+    margin-right: 0;
+}
