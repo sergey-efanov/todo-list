@@ -6,7 +6,6 @@ function App() {
   return (
     <div>
       <Header />
-      TODO-LIST
       <Banner />
       <Footer />
     </div>

@@ -1,11 +1,8 @@
-const footerStyle = {
-  padding: "20px",
-  backgroundColor: "#464046",
-  color: "#A2A1A9",
-};
+import footerStyle from "./footer.module.css"
+
 
 function Footer() {
-  return <footer style={footerStyle}>Подвал сайта</footer>;
+  return <footer className={footerStyle.footer}>Подвал сайта</footer>;
 }
 
 export default Footer;
