@@ -6,7 +6,6 @@ export default function Banner() {
     <figure className={bannerStyle.container}>
       <h1>TODO-LIST</h1>
       <img className={bannerStyle.picture} src={image} alt="Картинка" />
-      <figcaption className={bannerStyle.caption}>Текст</figcaption>
     </figure>
   );
 }
