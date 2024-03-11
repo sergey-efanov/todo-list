@@ -5,7 +5,7 @@ function Task({ task }) {
     <div className={taskStyle.container}>
       <h3 className={taskStyle.title}>Задача №{task.id}</h3>
       <p>Статус: {task.execution_status}</p>
-      <p>Приоритет: {task.priority}</p>
+      <p>Приоритет: {task.priority.status}</p>
       <p>Описание: {task.description}</p>
       <p>Участники: {task.participants.join(", ")}</p>
       <p>Дата создания: {task.created_date}</p>
