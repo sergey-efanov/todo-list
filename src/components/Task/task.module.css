@@ -1,9 +1,26 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   padding: 25px;
+  margin-bottom: 30px;
   border-radius: 30px;
   background-color: rgb(206, 252, 230);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.container:hover {
+  background-color: rgb(175, 252, 213);
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 5%;
+  left: 50%;
+  border-right: 2px solid rgb(49, 92, 68);
+  border-bottom: 2px solid rgb(49, 92, 68);
+  transform: rotate(45deg);
 }
