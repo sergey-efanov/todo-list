@@ -12,3 +12,14 @@
 .title__search {
   margin-right: 15px;
 }
+
+input {
+  padding: 10px 10px;
+  border-radius: 20px;
+  border: 1px solid #233f2c;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 1px 1px 5px #7aa18e;
+}

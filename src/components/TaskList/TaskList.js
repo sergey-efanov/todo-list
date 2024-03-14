@@ -54,7 +54,7 @@ function TaskList() {
   return (
     <div className={tasklistStyle.container}>
       <div className={tasklistStyle.search}>
-        <label className={tasklistStyle.title__search}>Поиск</label>
+        <label className={tasklistStyle.title__search}>Поиск по статусу</label>
         <input onChange={(e) => handleStatusSearch(e)} />
       </div>
       {taskCards}
