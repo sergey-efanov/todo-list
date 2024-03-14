@@ -10,15 +10,6 @@ const participantsTask = ["User1", "User2", "User3", "User4", "User5"];
 export default [
   {
     id: 1,
-    created_date: "2024-03-03",
-    completion_date: null,
-    priority: priorityTask[2],
-    description: "Задача 1",
-    participants: [participantsTask[1], participantsTask[4]],
-    execution_status: statusTask[0],
-  },
-  {
-    id: 2,
     created_date: "2024-03-02",
     completion_date: null,
     priority: priorityTask[1],
@@ -32,6 +23,16 @@ export default [
     execution_status: statusTask[0],
   },
   {
+    id: 2,
+    created_date: "2024-03-03",
+    completion_date: null,
+    priority: priorityTask[2],
+    description: "Задача 1",
+    participants: [participantsTask[1], participantsTask[4]],
+    execution_status: statusTask[0],
+  },
+
+  {
     id: 3,
     created_date: "2024-03-06",
     completion_date: null,
@@ -42,15 +43,6 @@ export default [
   },
   {
     id: 4,
-    created_date: "2024-03-07",
-    completion_date: "2024-03-10",
-    priority: priorityTask[1],
-    description: "Задача 4",
-    participants: [participantsTask[0]],
-    execution_status: statusTask[2],
-  },
-  {
-    id: 5,
     created_date: "2024-03-06",
     completion_date: null,
     priority: priorityTask[1],
@@ -58,4 +50,14 @@ export default [
     participants: [participantsTask[0]],
     execution_status: statusTask[0],
   },
+  {
+    id: 5,
+    created_date: "2024-03-07",
+    completion_date: "2024-03-10",
+    priority: priorityTask[1],
+    description: "Задача 4",
+    participants: [participantsTask[0]],
+    execution_status: statusTask[2],
+  },
+
 ];

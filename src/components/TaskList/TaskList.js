@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import tasks from "../../tasks";
 import Task from "../Task/Task";
 import tasklistStyle from "./tasklist.module.css";
@@ -9,11 +11,16 @@ function filterByStatus(task) {
 }
 
 function TaskList() {
-  const sortListDate = tasks.sort(
-    (a, b) => new Date(b.created_date) - new Date(a.created_date)
-  );
 
-  const filterTaskCards = tasks.filter((task) => filterByStatus(task));
+  const [isStatus, setIsStatus] = useState("all");
+
+  const filterTaskCards = tasks.filter((task) => {
+    if (isStatus === "all") {
+      return tasks
+    } else {
+      return task.execution_status.toLocaleLowerCase() === isStatus
+    }
+  });
 
   // все задачи отсортированные по дате
   const allTaskCards = filterTaskCards.map((task) => <Task task={task} />);
@@ -26,10 +33,8 @@ function TaskList() {
     if (new Date(b.created_date) > new Date(a.created_date)) {
       return -1;
     }
-    return b.priority.id - a.priority.id;
+    // return b.priority.id - a.priority.id;
   });
-
-  console.log();
 
   const taskCards = sortList.map((task) => (
     <Task key={task.id} task={task}>
@@ -37,7 +42,24 @@ function TaskList() {
     </Task>
   ));
 
-  return <div className={tasklistStyle.container}>{taskCards}</div>;
+  const handleStatusSearch = (e) => {
+    let status = e.target.value
+    if (status.length > 0) {
+      setIsStatus(status.toLowerCase())
+    } else {
+      setIsStatus("all")
+    }
+  }
+
+  return (
+    <div className={tasklistStyle.container}>
+      <div className={tasklistStyle.search}>
+        <label className={tasklistStyle.title__search}>Поиск</label>
+        <input onChange={(e) => handleStatusSearch(e)} />
+      </div>
+      {taskCards}
+    </div>
+  )
 }
 
 export default TaskList;
